@@ -12,9 +12,15 @@
 
     <rule ref="PSR12">
         <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
-        <exclude name="PEAR.Functions.ValidDefaultValue"/>
         <!-- Rule requires minimal PHP 7.1 version -->
         <exclude name="PSR12.Properties.ConstantVisibility.NotFound"/>
+    </rule>
+
+    <rule ref="PEAR.Functions.ValidDefaultValue">
+        <!-- We should preserve BC with possible child classes until next major version -->
+        <exclude-pattern>PhpAmqpLib/Helper/Protocol/Protocol091.php</exclude-pattern>
+        <exclude-pattern>PhpAmqpLib/Helper/Protocol/Protocol080.php</exclude-pattern>
+        <exclude-pattern>PhpAmqpLib/Connection/AbstractConnection.php</exclude-pattern>
     </rule>
 
     <file>PhpAmqpLib/</file>
