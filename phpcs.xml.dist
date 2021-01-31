@@ -13,6 +13,8 @@
     <rule ref="PSR12">
         <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
         <exclude name="PEAR.Functions.ValidDefaultValue"/>
+        <!-- Rule requires minimal PHP 7.1 version -->
+        <exclude name="PSR12.Properties.ConstantVisibility.NotFound"/>
     </rule>
 
     <file>PhpAmqpLib/</file>
