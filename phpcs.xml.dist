@@ -10,7 +10,7 @@
     <arg name="tab-width" value="4"/>
     <arg name="report-width" value="120"/>
 
-    <rule ref="PSR2">
+    <rule ref="PSR12">
         <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
         <exclude name="PEAR.Functions.ValidDefaultValue"/>
     </rule>
