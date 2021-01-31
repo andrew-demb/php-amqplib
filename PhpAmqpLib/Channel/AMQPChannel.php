@@ -89,7 +89,7 @@ class AMQPChannel extends AbstractChannel
 
     /**
      * Maximum time to wait for operations on this channel, in seconds.
-     * @var float $channel_rpc_timeout
+     * @var float
      */
     protected $channel_rpc_timeout;
 
