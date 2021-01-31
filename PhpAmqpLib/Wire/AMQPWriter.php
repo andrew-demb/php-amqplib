@@ -223,8 +223,10 @@ class AMQPWriter extends AbstractClient
         }
 
         $value = new BigInteger($n);
-        if ($value->compare(self::getBigInteger('0')) < 0
-            || $value->compare(self::getBigInteger('FFFFFFFFFFFFFFFF', 16)) > 0) {
+        if (
+            $value->compare(self::getBigInteger('0')) < 0
+            || $value->compare(self::getBigInteger('FFFFFFFFFFFFFFFF', 16)) > 0
+        ) {
             throw new AMQPInvalidArgumentException('Longlong out of range: ' . $n);
         }
 
@@ -258,8 +260,10 @@ class AMQPWriter extends AbstractClient
         }
 
         $value = new BigInteger($n);
-        if ($value->compare(self::getBigInteger('-8000000000000000', 16)) < 0
-            || $value->compare(self::getBigInteger('7FFFFFFFFFFFFFFF', 16)) > 0) {
+        if (
+            $value->compare(self::getBigInteger('-8000000000000000', 16)) < 0
+            || $value->compare(self::getBigInteger('7FFFFFFFFFFFFFFF', 16)) > 0
+        ) {
             throw new AMQPInvalidArgumentException('Signed longlong out of range: ' . $n);
         }
 
